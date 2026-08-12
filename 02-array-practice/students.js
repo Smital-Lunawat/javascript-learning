@@ -68,3 +68,22 @@ const totalMarksWithImplicitReturn = students.reduce(
 );
 
 console.log(totalMarksWithImplicitReturn);
+
+// Q6. Return total marks for students with marks greater than 60,
+// after adding 20 marks to students who scored less than 60.
+
+// map -> filter -> reduce
+const totalMarksAfterBonus = students
+  .map((student) => {
+    if (student.marks < 60) {
+      student.marks += 20;
+    }
+
+    return student;
+  })
+  .filter((student) => student.marks > 60)
+  .reduce((accumulator, currentStudent) => {
+    return accumulator + currentStudent.marks;
+  }, 0);
+
+console.log(totalMarksAfterBonus);
