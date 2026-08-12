@@ -1,21 +1,23 @@
 # Array Method Polyfills
 
-A polyfill recreates a feature when the environment does not provide it. These educational implementations recreate the core behavior of:
+A polyfill is our own implementation of a feature that JavaScript already provides. Here I practiced:
 
 - `Array.prototype.map`
 - `Array.prototype.filter`
 - `Array.prototype.reduce`
 
-All three receive a callback. The callback's parameter names do not matter; their positions determine what values they receive.
+All three methods receive a callback function.
+
+The callback parameter names can be anything. Their positions decide what values they receive:
 
 ```js
 numbers.myMap((value, index, array) => value * 3);
 numbers.myMap((banana, position, original) => banana * 3);
 ```
 
-Those callbacks behave identically because `value` and `banana` are only local variable names.
+Both callbacks work identically. `value` and `banana` are only variable names.
 
-## Important `reduce` detail
+## What I learned about `reduce`
 
 The initial implementation used the accumulator's truthiness to decide whether it existed:
 
@@ -25,7 +27,4 @@ accumulator = accumulator
   : current;
 ```
 
-That breaks when the accumulator is a valid falsy value such as `0`, `false`, or `""`. The corrected implementation checks whether an initial argument was supplied using `arguments.length`.
-
-It also throws on an empty array with no initial value, matching native `reduce` behavior.
-
+This can fail when the accumulator becomes `0`, because `0` is falsy. It is simpler to decide the starting accumulator before the loop and then update it normally inside the loop.

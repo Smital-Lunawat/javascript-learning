@@ -4,8 +4,6 @@
   "private": true,
   "description": "JavaScript concepts and exercises",
   "scripts": {
-    "arrays": "node 01-array-methods/polyfills.js",
-    "test": "node 01-array-methods/polyfills.test.js"
+    "arrays": "node 01-array-methods/polyfills.js"
   }
 }
-

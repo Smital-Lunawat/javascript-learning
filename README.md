@@ -6,7 +6,7 @@ A growing collection of JavaScript concepts, exercises, and implementations crea
 
 | # | Topic | Concepts |
 |---:|---|---|
-| 1 | [Array method polyfills](01-array-methods/polyfills.js) | Callbacks, `this`, prototypes, sparse arrays, and `map`, `filter`, `reduce` |
+| 1 | [Array method polyfills](01-array-methods/polyfills.js) | Callbacks, `this`, prototypes, `map`, `filter`, and `reduce` |
 
 ## Run the examples
 
@@ -20,12 +20,10 @@ No third-party packages are required.
 
 ## Learning approach
 
-Each topic aims to include:
+This repository is simply a place to store what I learn:
 
-- A small implementation
+- Simple code written during practice
+- Short notes in my own words
 - Runnable examples
-- Notes about edge cases
-- A comparison with native JavaScript behavior
 
-> These implementations are for learning. In production code, prefer JavaScript's native methods unless you have a specific reason not to.
-
+> These are learning notes, not production implementations.
