@@ -24,29 +24,34 @@ const mappedNames = students.map((student) => {
 
 console.log(mappedNames);
 
-// Q2. Return the marks of students who scored more than 60.
+// Q2. Find students who scored more than 60.
 
 // Method 1: Using a for loop
-const marksMoreThan60 = [];
+const moreThan60 = [];
 
 for (let index = 0; index < students.length; index++) {
   if (students[index].marks > 60) {
-    marksMoreThan60.push(students[index].marks);
+    moreThan60.push(students[index].name);
   }
 }
 
-console.log(marksMoreThan60);
+console.log(moreThan60);
 
-// Method 2: Using filter and map
-const filteredStudentMarks = students
+// filter returns the complete student objects.
+const filteredStudents = students.filter((student) => {
+  return student.marks > 60;
+});
+
+console.log(filteredStudents);
+
+// Combine filter with map to return only the names.
+const filteredStudentNames = students
   .filter((student) => {
     return student.marks > 60;
   })
-  .map((student) => {
-    return student.marks;
-  });
+  .map((student) => student.name);
 
-console.log(filteredStudentMarks);
+console.log(filteredStudentNames);
 
 // Q3. Find the sum of marks of all students.
 const totalMarks = students.reduce((accumulator, currentStudent) => {
@@ -63,4 +68,3 @@ const totalMarksWithImplicitReturn = students.reduce(
 );
 
 console.log(totalMarksWithImplicitReturn);
-

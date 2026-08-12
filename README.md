@@ -14,11 +14,9 @@ A growing collection of JavaScript concepts, exercises, and implementations crea
 Install [Node.js](https://nodejs.org/), clone this repository, and run:
 
 ```bash
-npm run arrays
-npm run students
+node 01-array-methods/polyfills.js
+node 02-array-practice/students.js
 ```
-
-No third-party packages are required.
 
 ## Learning approach
 
