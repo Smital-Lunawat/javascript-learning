@@ -1,0 +1,11 @@
+{
+  "name": "javascript-learning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JavaScript concepts and exercises",
+  "scripts": {
+    "arrays": "node 01-array-methods/polyfills.js",
+    "test": "node 01-array-methods/polyfills.test.js"
+  }
+}
+
