@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currying DOM Example</title>
+  </head>
+  <body>
+    <h1 id="heading">Original Heading</h1>
+
+    <script>
+      // Q4. Use currying to update an element in the DOM.
+      function updateElementText(id) {
+        return function (content) {
+          document.querySelector("#" + id).textContent = content;
+        };
+      }
+
+      const updateHeader = updateElementText("heading");
+      updateHeader("Hello World!");
+    </script>
+  </body>
+</html>
+
